@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@700;800;900&family=Titillium+Web:wght@300;600;700&family=Zen+Dots&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-family: "Zen Dots", sans-serif;
+
+  justify-content: center;
+  min-height: 100vh;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+}
+
+.container {
+  width: 850px;
+  background-color: #25ad65;
+  display: flex;
+  gap: 70px;
+  align-items: flex-end;
+  padding: 60px 40px;
+  border-radius: 10px;
+}
+
+svg {
+  width: 80%;
+  height: 80%;
+}
+
+.a2,
+.a3,
+.a4,
+.a5 {
+  display: none;
+}
+
+.hangman-box img {
+  max-width: 270px;
+}
+
+.hangman-box h1 {
+  font-size: 1.45rem;
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.word-display {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.word-display .letter {
+  width: 28px;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  border-bottom: 3px solid black;
+}
+
+.word-display .letter.guessed {
+  border-color: transparent;
+  margin: -40px 0 35px;
+}
+
+.game-box h4 {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.game-box h4 b {
+  font-weight: 600;
+}
+
+.game-box .guesses-text b {
+  color: #ff0000;
+}
+
+.game-box .keyboard {
+  display: flex;
+  gap: 2px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.keyboard button {
+  padding: 5px;
+  width: calc(100% / 9 - 5px);
+  font-family: "Zen Dots", sans-serif;
+  border-radius: 9px;
+}
+
+.keyboard button[disabled] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.virtual-key {
+  background-color: white;
+  padding: 0px;
+  margin: 5px;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+
+.virtual-key.active {
+  background-color: #afa484;
+}
+
+.newGameBox.show {
+  background-color: rgb(252, 254, 252);
+  display: grid;
+  grid-template-columns: 1fr 250px 1fr;
+  grid-template-rows: 1fr 250px 1fr;
+  border-radius: 9px;
+  border-style: none;
+  height: 80vh;
+  width: 60vw;
+}
+
+.newGame {
+  display: none;
+}
+
+.showGame {
+  background-color: #fff;
+  display: block;
+  justify-self: center;
+  align-self: center;
+  grid-column: 2;
+  grid-row: 3;
+  height: 30px;
+  width: 120px;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 9px;
+  box-shadow: 16px 16px 15px 0px rgba(3, 2, 21, 0.75);
+}
+
+#gameText {
+  margin: 2rem auto;
+  grid-column: 1/4;
+  grid-row: 1;
+}
+
+.Victory-Gif {
+  display: none;
+}
+
+.theGif {
+  display: none;
+}
+
+.show {
+  display: flex;
+  justify-self: center;
+  grid-column: 2/3;
+  grid-row: 2;
+  height: 30vh;
+}
+
+.hide {
+  display: none;
+}
